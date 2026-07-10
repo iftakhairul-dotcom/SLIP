@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SLIP — Smart Land Investment Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============================= LOGIN SCREEN ============================= -->
+  <div id="login-screen" class="screen login-screen">
+    <div class="login-card">
+      <div class="brand">
+        <span class="brand-mark">SLIP</span>
+        <span class="brand-sub">Smart Land Investment Platform</span>
+      </div>
+
+      <form id="login-form" novalidate>
+        <label class="field-label" for="login-email">ID (email)</label>
+        <input id="login-email" class="field-input" type="email" autocomplete="username" required />
+
+        <label class="field-label" for="login-password">Password</label>
+        <input id="login-password" class="field-input" type="password" autocomplete="current-password" required />
+
+        <div id="login-error" class="form-error" hidden></div>
+
+        <button type="submit" id="login-submit" class="btn-primary">
+          <span class="btn-label">Sign in</span>
+          <span class="btn-spinner" hidden></span>
+        </button>
+      </form>
+
+      <p class="login-footnote">
+        Access is by invitation only. Contact your SLIP administrator if you
+        need an account.
+      </p>
+    </div>
+  </div>
+
+  <!-- ============================== APP SHELL ================================ -->
+  <div id="app-shell" class="screen app-shell" hidden>
+
+    <!-- Side rail — visible on tablet/desktop widths -->
+    <nav class="side-rail" id="side-rail">
+      <div class="side-rail-brand">SLIP</div>
+      <button class="nav-item" data-tab="roi">
+        <span class="nav-icon">◎</span><span class="nav-label">ROI Calculator</span>
+      </button>
+      <button class="nav-item" data-tab="ledger">
+        <span class="nav-icon">▤</span><span class="nav-label">Ledger</span>
+      </button>
+      <button class="nav-item" data-tab="ai">
+        <span class="nav-icon">✦</span><span class="nav-label">AI Post</span>
+      </button>
+      <div class="side-rail-spacer"></div>
+      <div class="side-rail-user" id="side-rail-user"></div>
+      <button class="nav-item nav-signout" id="signout-btn-desktop">
+        <span class="nav-icon">⏻</span><span class="nav-label">Sign out</span>
+      </button>
+    </nav>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <header class="topbar">
+        <div class="topbar-title" id="topbar-title">ROI Calculator</div>
+        <button class="topbar-signout" id="signout-btn-mobile">Sign out</button>
+      </header>
+
+      <section id="tab-roi" class="tab-panel"></section>
+      <section id="tab-ledger" class="tab-panel" hidden></section>
+      <section id="tab-ai" class="tab-panel" hidden></section>
+    </main>
+
+    <!-- Bottom tab bar — visible on phone widths -->
+    <nav class="bottom-bar" id="bottom-bar">
+      <button class="bottom-item" data-tab="roi">
+        <span class="nav-icon">◎</span><span class="nav-label">ROI</span>
+      </button>
+      <button class="bottom-item" data-tab="ledger">
+        <span class="nav-icon">▤</span><span class="nav-label">Ledger</span>
+      </button>
+      <button class="bottom-item" data-tab="ai">
+        <span class="nav-icon">✦</span><span class="nav-label">AI Post</span>
+      </button>
+    </nav>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

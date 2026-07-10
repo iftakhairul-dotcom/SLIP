@@ -1,0 +1,13 @@
+{
+  apiKey: "AIzaSyC4Y23NSZ_rkTZPO4fsoJkfQZXMISn1QPg",
+  authDomain: "slip-landvest1.firebaseapp.com",
+  projectId: "slip-landvest1",
+  storageBucket: "slip-landvest1.firebasestorage.app",
+  messagingSenderId: "1040439032853",
+  appId: "1:1040439032853:web:907a258fdb8ed39b59e21c",
+  measurementId: "G-FHZJPZ0HWR"
+};
+  "firestore": {
+    "rules": "firestore.rules"
+  }
+}
